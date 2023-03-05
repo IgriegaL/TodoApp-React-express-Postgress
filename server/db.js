@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const pool = new Pool({
     user:process.env.USERNAME,
-    password:'1234',
+    password:process.env.PASSWORD,
     host: process.env.HOST,
     port: process.env.DBPORT,
     database:'todoapp'

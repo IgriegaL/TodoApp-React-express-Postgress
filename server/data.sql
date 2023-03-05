@@ -18,6 +18,6 @@ select * from todos;
 /**
 Package to install
 */
-npm i express cors bcrypt jsonwebtoken uuid dotenv nodemon
+npm i express cors bcrypt jsonwebtoken uuid dotenv nodemon pg
 -- Instalar global
 npm i -g ...

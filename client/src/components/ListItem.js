@@ -1,10 +1,12 @@
 import React from "react";
 import ProgressBar from "./ProgressBar";
+import TickIcon from "./TickIcon";
 
 function ListItem({ task }) {
   return (
     <div className="list-item">
       <div className="info-container">
+        <TickIcon />
         <p className="task-title">{task.title}</p>
       </div>
       <ProgressBar />

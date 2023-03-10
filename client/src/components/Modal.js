@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 
 function Modal({ mode, setShowModal }) {
-  console.log(setShowModal);
   const editMode = mode === "edit" ? true : false;
 
   const [data, setData] = useState({
@@ -20,6 +19,11 @@ function Modal({ mode, setShowModal }) {
       [name]: value,
     }));
   };
+  console.log("setShowModal: " + setShowModal);
+  const handleCloseModal = () => {
+    setShowModal(false);
+    console.log("Modal closed");
+  };
 
   return (
     <div className="overlay">
@@ -27,10 +31,9 @@ function Modal({ mode, setShowModal }) {
         <div className="form-title-container">
           <h3>Lets {mode} you task</h3>
           <button
-            onClick={() => {
-              setShowModal(false);
-              console.log(setShowModal(false));
-            }}
+            onClick={
+              handleCloseModal
+            }
           >
             x
           </button>

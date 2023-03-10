@@ -19,8 +19,15 @@ function ListHeader({ listName }) {
           Sign Out
         </button>
       </div>
-      {showModal && (<Modal mode={"create"} setShowModal={() => setShowModal(true)} />
-      )}
+
+      {/*
+      Show modal malo
+      showModal && (
+        <Modal mode={"create"} setShowModal={() => setShowModal(true)} />
+      )
+      */}
+
+      {showModal && <Modal mode={"create"} setShowModal={setShowModal} />}
     </div>
   );
 }

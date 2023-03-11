@@ -11,6 +11,7 @@ function Modal({ mode, setShowModal, task }) {
     progress: editMode ? task.progress : 50,
     date: editMode ? "" : new Date(),
   });
+  console.log('DATA PROGRESS' + data.progress)
   
   console.log('DATA ::: ' + data)
   const postData = async (e) => {
